@@ -9,6 +9,7 @@
   var hbs = require('express-hbs');
   var mongoose = require('mongoose');
   var session = require('express-session');
+  var update = require('update');
 
   //require routes
   var index = require('./routes/index');
@@ -42,11 +43,10 @@
   // view engine setup
   
   hbs.registerHelper('checkedBox', function(check) {
-    console.log('antes: '+ typeof check);
+    
     check = hbs.Utils.escapeExpression(check);
     var result = '';
     
-    console.log('depois: '+ typeof check);
     if(check === 'true'){
       result = ' checked ';  
     } 
