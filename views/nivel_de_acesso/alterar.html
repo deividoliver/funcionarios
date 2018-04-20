@@ -1,0 +1,30 @@
+<html>
+	{{>head}}
+
+	<body>
+		<form method="post" action="/nivel_de_acesso/{{nivel_de_acesso._id}}">
+			<h2>Cadastro - Nivel de acesso</h2>
+			<h2>{{mensagem}}</h2>
+
+			<input  type="hidden" name="_id" value="{{nivel_de_acesso._id}}">
+						
+			<label  for="nome" >*Nome: </label>
+			<input  name="nome" type="text" value="{{nivel_de_acesso.nome}}" required="true"><br/>
+
+			<br><label>Funcionario: </label><br>
+			
+			<input type="checkbox" name="funcionario[criar]" value="true" {{checkedBox nivel_de_acesso.funcionario.criar}}>Cadastrar<br>
+			<input type="checkbox" name="funcionario[ler]" value="true" {{checkedBox nivel_de_acesso.funcionario.ler}}>Listar<br> 
+			<input type="checkbox" name="funcionario[alterar]" value="true" {{checkedBox nivel_de_acesso.funcionario.alterar}}>Atualizar<br>
+			<input type="checkbox" name="funcionario[excluir]" value="true" {{checkedBox nivel_de_acesso.funcionario.excluir}}>Excluir<br>
+			
+			<br><label>Nivel de acesso: </label><br>
+			<input type="checkbox" name="nivel_de_acesso[criar]" value="true" {{checkedBox nivel_de_acesso.nivel_de_acesso.criar}}>Cadastrar<br>
+			<input type="checkbox" name="nivel_de_acesso[ler]" value="true" {{checkedBox nivel_de_acesso.nivel_de_acesso.ler}}>Listar<br> 
+			<input type="checkbox" name="nivel_de_acesso[alterar]" value="true" {{checkedBox nivel_de_acesso.nivel_de_acesso.alterar}}>Atualizar<br>
+			<input type="checkbox" name="nivel_de_acesso[excluir]" value="true" {{checkedBox nivel_de_acesso.nivel_de_acesso.excluir}}>Excluir<br>
+
+			<br><input type="submit" value="Alterar">
+		</form>
+	</body>
+</html>

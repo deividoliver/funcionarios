@@ -1,0 +1,29 @@
+<html>
+	{{>head}}
+
+	<body>
+		<form method="post" action="/funcionario/cadastrar">
+			
+			<h2>{{mensagem}}</h2>
+						
+			<label  for="nome" required>Nome: </label>
+			<input  name="nome" type="text" value=""><br/>
+
+			<label  for="email" >*Email: </label>
+			<input  name="email" type="email" required="true" value=""><br/>
+
+			<label  for="telefone" >Telefone: </label>
+			<input  name="telefone" type="text" value=""><br/>
+			
+			<label >*Nivel de Acesso: </label>
+			<select name="_nivel_de_acesso">
+				{{#nivel_de_acesso}}
+					<option  value="{{_id}}">{{nome}}</option>
+				{{/nivel_de_acesso}}
+			</select><br/>
+
+
+			<input type="submit" value="Cadastrar">
+		</form>
+	</body>
+</html>

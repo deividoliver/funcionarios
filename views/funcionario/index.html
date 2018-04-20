@@ -1,0 +1,17 @@
+<html>
+	{{>head}}
+
+	<body>
+			<h2>Funcionarios</h2>
+			<h2>{{mensagem}}</h2>
+			{{#funcionarios}}
+			
+			<a href="/funcionario/{{_id}}">{{nome}}</a>
+			- <a href="/funcionario/deletar/{{_id}}">Deletar</a> 
+			<br/><br/>
+			
+			{{/funcionarios}}
+			<a href="/funcionario/cadastrar">Cadastrar</a>
+		
+	</body>
+</html>

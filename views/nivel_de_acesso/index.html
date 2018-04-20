@@ -1,0 +1,17 @@
+<html>
+	{{>head}}
+
+	<body>
+			<h2>Nivel de acesso</h2>
+			<h2>{{mensagem}}</h2>
+			{{#nivel_de_acessos}}
+			
+			<a href="/nivel_de_acesso/{{_id}}">{{nome}}</a>
+			- <a href="/nivel_de_acesso/deletar/{{_id}}">Deletar</a> 
+			<br/><br/>
+			
+			{{/nivel_de_acessos}}
+			<a href="/nivel_de_acesso/cadastrar">Cadastrar</a>
+		
+	</body>
+</html>

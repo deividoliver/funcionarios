@@ -1,0 +1,28 @@
+<html>
+	{{>head}}
+
+	<body>
+		<form method="post" action="/nivel_de_acesso/cadastrar">
+			<h2>Cadastro - Nivel de acesso</h2>
+			<h2>{{mensagem}}</h2>
+						
+			<label  for="nome" >*Nome: </label>
+			<input  name="nome" type="text" value="" required="true"><br/>
+
+			<br><label>Funcionario: </label><br>
+
+			<input type="checkbox" name="funcionario[criar]" value="true">Cadastrar<br>
+			<input type="checkbox" name="funcionario[ler]" value="true">Listar<br> 
+			<input type="checkbox" name="funcionario[alterar]" value="true">Atualizar<br>
+			<input type="checkbox" name="funcionario[excluir]" value="true">Excluir<br>
+
+			<br><label>Nivel de acesso: </label><br>
+			<input type="checkbox" name="nivel_de_acesso[criar]" value="true">Cadastrar<br>
+			<input type="checkbox" name="nivel_de_acesso[ler]" value="true">Listar<br> 
+			<input type="checkbox" name="nivel_de_acesso[alterar]" value="true">Atualizar<br>
+			<input type="checkbox" name="nivel_de_acesso[excluir]" value="true">Excluir<br>
+
+			<br><input type="submit" value="Cadastrar">
+		</form>
+	</body>
+</html>
