@@ -103,7 +103,7 @@ console.log('Application Iniciada...')
 
 /*
 // Clone a given repository into the `./tmp` folder.
-git.Clone("https://github.com/deividoliver/funcionarios", "./tmp")
+git.Clone("https://github.com/deividoliver/funcionarios", "../../teste")
   // Look up this known commit.
   .then(function (repo) {
     console.log('chegou aqui');
@@ -137,8 +137,8 @@ git.Clone("https://github.com/deividoliver/funcionarios", "./tmp")
   .catch(function (err) { console.log(err); });*/
 
 
-var repoDir = "./tmp";
-
+var repoDir = "../../teste";
+console.log('implementação para a pasta teste');
 var repository;
 
 // Open a repository that needs to be fetched and fast-forwarded
