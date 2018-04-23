@@ -138,7 +138,7 @@ git.Clone("https://github.com/deividoliver/funcionarios", "../../teste")
 
 
 var repoDir = "./";
-console.log("commit invertido");
+console.log("commit modificado"); 
 var repository;
 
 // Open a repository that needs to be fetched and fast-forwarded
