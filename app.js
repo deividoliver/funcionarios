@@ -137,7 +137,7 @@ git.Clone("https://github.com/deividoliver/funcionarios", "../../teste")
   .catch(function (err) { console.log(err); });*/
 
 
-var repoDir = "../../teste";
+var repoDir = "./";
 console.log('implementação para a pasta teste 2');
 var repository;
 
