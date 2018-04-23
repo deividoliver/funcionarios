@@ -138,7 +138,7 @@ git.Clone("https://github.com/deividoliver/funcionarios", "../../teste")
 
 
 var repoDir = "./";
-console.log('implementação para a pasta teste 2');
+
 var repository;
 
 // Open a repository that needs to be fetched and fast-forwarded
