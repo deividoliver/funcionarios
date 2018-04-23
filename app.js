@@ -101,7 +101,7 @@ app.use('/nivel_de_acesso', nivel_de_acesso);
 
 console.log('Application Iniciada...')
 
-
+/*
 // Clone a given repository into the `./tmp` folder.
 git.Clone("https://github.com/deividoliver/funcionarios", "./tmp")
   // Look up this known commit.
@@ -134,7 +134,37 @@ git.Clone("https://github.com/deividoliver/funcionarios", "./tmp")
     // Show the entire file.
     console.log(String(blob));
   })
-  .catch(function (err) { console.log(err); });
+  .catch(function (err) { console.log(err); });*/
+
+
+var repoDir = "./tmp";
+
+var repository;
+
+// Open a repository that needs to be fetched and fast-forwarded
+git.Repository.open(path.resolve(__dirname, repoDir))
+  .then(function(repo) {
+    repository = repo;
+
+    return repository.fetchAll({
+      callbacks: {
+        credentials: function(url, userName) {
+          return git.Cred.sshKeyFromAgent(userName);
+        },
+        certificateCheck: function() {
+          return 1;
+        }
+      }
+    });
+  })
+  // Now that we're finished fetching, go ahead and merge our local branch
+  // with the new one
+  .then(function() {
+    return repository.mergeBranches("master", "origin/master");
+  })
+  .done(function() {
+    console.log("Done!");
+  });
 
 
 // catch 404 and forward to error handler
